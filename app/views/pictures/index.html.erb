@@ -1,0 +1,11 @@
+There are all the pictures for <%= @user.name %>
+
+<ul>
+
+	<% @pictures.each do |picture| %>
+
+		<li>Picture Title: <%= picture.title %>
+	
+	<%	end %>
+
+</ul>
