@@ -55,12 +55,14 @@ UserApp::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-  resources :session
   resources :users #do
     #resources :pictures, :only => [:new, :create, :index]
   #end
 
-   resources :pictures
+  resources :pictures
+
+  match 'login' => 'session#new', :as => :login, :via => ['GET']
+  match 'login' => 'session#create', :as => :login, :via => ['POST']
 
 
 end

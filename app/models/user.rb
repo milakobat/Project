@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 	 validates :name, :length => { :in => 3..140}
 	 validates :password, :presence => true
-	 validates :wedding, :presence => true
+	 # validates :wedding, :presence => true
 
 	 belongs_to :wedding
 	 has_many :pictures
@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
 	 #define the class method Authenticate
 
-	 def self.authenticate(email,password)
+	 def self.authenticate(name,password)
 	 	#find user
 	 	user =User.find_by_name(name)
 	 	#check pass

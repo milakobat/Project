@@ -8,8 +8,10 @@ class SessionController < ApplicationController
 		if @user.authenticate(params[:password])
 			session[:user_id] = @user.id
 			redirect_to @user
+		else
+			render :new
 		end
-		render :new
+		
 	end
 
 	def destroy

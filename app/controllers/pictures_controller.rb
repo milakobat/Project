@@ -1,9 +1,9 @@
 class PicturesController < ApplicationController
 	
 	def index
-		user_id = params["user_id"]
-		@user = User.find(user_id)
-		@pictures = @user.pictures.all()
+		#user_id = params["user_id"]
+		#@user = User.find(user_id)
+		@pictures = current_user.pictures.all()
 	end
 
 	def new
@@ -12,8 +12,9 @@ class PicturesController < ApplicationController
 	end
 
 	def create
-		current_user = User.find(params["user_id"])
-		current_user.pictures.create params[:picture].slice(:text)
+		#current_user = User.find(params["user_id"])
+		current_user.pictures.create params[:picture].slice(:title)
+		redirect_to :action => "index"
 	end
 
 	 def ensure_logged_in
