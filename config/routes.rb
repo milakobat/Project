@@ -56,11 +56,11 @@ UserApp::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   resources :session
-  resources :users do
-    resources :pictures, :only => [:new, :create, :index]
-  end
+  resources :users #do
+    #resources :pictures, :only => [:new, :create, :index]
+  #end
 
-   resources :pictures, :only => [:show, :edit, :delete, :update]
+   resources :pictures
 
 
 end

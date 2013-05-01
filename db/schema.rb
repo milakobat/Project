@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429191627) do
+ActiveRecord::Schema.define(:version => 20130501180838) do
 
   create_table "dreams", :force => true do |t|
     t.integer  "wedding_id"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20130429191627) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "title"
   end
 
   add_index "pictures", ["user_id"], :name => "index_pictures_on_user_id"
@@ -32,10 +33,11 @@ ActiveRecord::Schema.define(:version => 20130429191627) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "wedding_id"
     t.string   "surname"
+    t.string   "password_digest"
   end
 
   create_table "weddings", :force => true do |t|

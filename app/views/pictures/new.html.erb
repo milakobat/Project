@@ -1,1 +1,13 @@
-new.html.erb
+
+
+
+
+<%= form_for(@picture, :html => {:class => "custom"}) do |f| %>
+
+	<h1>Upload new picture<h1>
+	<p>Picture Title: <%=f.text_field :title %></p>
+		<% if @picture.errors.include? :title %>
+		<p>Picture title is invalid</p>
+		<%end%>
+	<%= f.submit %>
+<%end%>

@@ -7,10 +7,8 @@ class PicturesController < ApplicationController
 	end
 
 	def new
-		# ensure_logged_in
-		user_id = params["user_id"]
-		@user = User.find(user_id)
-		@picture = @user.pictures.new()
+		ensure_logged_in
+		@picture = current_user.pictures.new()
 	end
 
 	def create
@@ -18,11 +16,11 @@ class PicturesController < ApplicationController
 		current_user.pictures.create params[:picture].slice(:text)
 	end
 
-	# def ensure_logged_in
-	# 	if current_user.nil?
-	# 		raise "Not logged in"
-	# 	end
-	# end
+	 def ensure_logged_in
+	 	if current_user.nil?
+	 		raise "Not logged in"
+	 	end
+	 end
 
 
 end
