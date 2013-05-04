@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  def current_user
-  	@user = User.find(1)
-  end
+  #def current_user
+  #	@user = User.new()
+  #end
 
 end

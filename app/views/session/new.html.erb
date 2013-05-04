@@ -1,5 +1,41 @@
-<form method="POST" action="<%= login_path %>">
-	Name: <input type="text" name="name"></input>
-	Password: <input type="password" name="password"></input>
-	<input type="submit" title="Submit"></input>
-</form>
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Bride & Groom">
+		<title>Bride & Groom</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		
+	</head>
+
+	<body>
+		<div id="index">
+				<h5>Bride</h5>
+				<h6>&</h6>
+				<h5>Groom</h5>
+		</div>
+		<section class="loginform">  
+			<form class="login" name="login" method="POST" action="<%= login_path %>" accept-charset="utf-8">  
+				       
+				<div class="username">
+					<!--<label for="username">Nombre de Usuario</label>-->  
+					<input type="text" name="name" placeholder="USERNAME"></input>
+					<p class="error"></p>
+				</div>
+
+				<div class="password">
+					<!--<label for="password">Contraseña</label>-->  
+					<input type="password" name="password" placeholder="PASSWORD"></input> 
+					<p class="error"></p>
+				</div>
+					        
+				<input id= "submit" type="submit" title="Submit" value=" "> 
+
+				</form>  
+			</section>
+		<script type="text/javascript" src="js/jquery.js"></script> 
+		<!--<script type="text/javascript" src="js/userweb.js"></script>-->	
+	</body>
+
+</html>

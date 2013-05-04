@@ -64,5 +64,7 @@ UserApp::Application.routes.draw do
   match 'login' => 'session#new', :as => :login, :via => ['GET']
   match 'login' => 'session#create', :as => :login, :via => ['POST']
 
+  match 'logout' => 'session#destroy', :as => :logout, :via => ['GET']
+
 
 end

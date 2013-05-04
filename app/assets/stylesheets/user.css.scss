@@ -1,3 +1,53 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	margin:0px;
+	font-family: Bentham;
+	color:#58585b;
+	/*background: url(../images/background.png);*/
+}
+
+
+#header{
+	width: 150px;
+	height: 103px;
+	margin: 30px auto 60px auto;
+	text-align: center;
+	background: url(../images/logo_small.png) no-repeat;
+	font-family: 'Sail';
+	line-height: 20px;
+	padding-top: 30px;
+}
+
+h1{ 
+	font-family: Steelfish;
+	font-weight: normal;
+	font-size: 30px;
+	text-align: center;
+	line-height: 8px;
+	text-transform: uppercase;
+}
+
+h3{ /* header */
+	font-family: Sail;
+	font-weight: normal;
+	font-size: 30px;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+}
+
+h4{ /* header */
+	font-weight: normal;
+	color: #d7c9aa;
+	font-size: 30px;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+}
+
+p{
+	width: 200px;
+	margin: 30px auto;
+	text-align: center;
+}
