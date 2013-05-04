@@ -1,21 +1,51 @@
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Bride & Groom">
+		<title>Bride & Groom</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		
+	</head>
+
+	<body>
+		<div>
+				<h1>Hi Bride&Groom-to-be</h1>
+				<p>Here you can create your guests' usernames and passwords</p>
+		</div>
+		<section class="loginform">  
+			<%= form_for(@user, :html => {:class => "login"}) do |f| %>
+			 	       
+				<div class="username">
+					<!--<label for="username">Nombre de Usuario</label>-->  
+					<p>User name: <%= f.text_field :name %></p>
+						<% if @user.errors.include? :name %>
+							<p class="error">Name is invalid. I am custom</p>
+						<% end %>
+				</div>
+
+				<div class="password">
+					<!--<label for="password">Contraseña</label>-->  
+					<p>Password: <%=f.password_field :password %></p>
+					<% if @user.errors.include? :password %>
+						<p class="error">Password is invalid. I am custom</p>
+					<% end %>
+				</div>
+
+				<div class="password">
+					<!--<label for="password">Contraseña</label>-->  
+					<p>Confirm Password: <%=f.password_field :password_confirmation %></p>
+				</div>
+					        
+				<%= f.submit%>
+
+				<% end %> 
+			</section>
+		<script type="text/javascript" src="js/jquery.js"></script> 
+		<!--<script type="text/javascript" src="js/userweb.js"></script>-->	
+	</body>
+
+</html>
 
 
-
-
-<%= form_for(@user, :html => {:class => "custom"}) do |f| %>
-
-
-	<p>User name: <%= f.text_field :name %></p>
-	<% if @user.errors.include? :name %>
-		<p>Name is invalid. I am custom</p>
-	<% end %>
-
-	<p>Password: <%=f.password_field :password %></p>
-	<% if @user.errors.include? :password %>
-		<p>Password is invalid. I am custom</p>
-	<% end %>
-
-	<p>Confirm Password: <%=f.password_field :password_confirmation %></p>
-
-	<%= f.submit %>
-<% end %>

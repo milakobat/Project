@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-	margin:0px;
+	margin:40px;
 	font-family: Bentham;
 	color:#58585b;
 	/*background: url(../images/background.png);*/
@@ -50,4 +50,15 @@ p{
 	width: 200px;
 	margin: 30px auto;
 	text-align: center;
+}
+
+.submit{
+	background: #d7c9aa;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	border:none;
+	margin-top: 20px;
+	cursor: pointer;
+
 }

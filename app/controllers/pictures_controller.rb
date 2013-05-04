@@ -7,7 +7,7 @@ class PicturesController < ApplicationController
 	end
 
 	def new
-		ensure_logged_in
+		#ensure_logged_in
 		@picture = @user.pictures.new()
 	end
 

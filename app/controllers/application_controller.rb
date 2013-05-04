@@ -1,8 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  include SessionsHelper
 
-  #def current_user
-  #	@user = User.new()
-  #end
+  def handle_unverified_request
+  	sign_out
+  	super
+  end
 
 end
